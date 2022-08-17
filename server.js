@@ -9,7 +9,7 @@ const profile = require('./controllers/profile')
 //Connect postgres
 const db = require('knex')({
     client: 'pg',
-    connectioin: {
+    connection: {
         connectionString: 'postgresql-angular-80453',
         ssl: {
             rejectUnauthorized: false
