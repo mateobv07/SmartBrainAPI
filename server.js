@@ -19,6 +19,9 @@ const app = express()
 app.use(express.json()); 
 app.use(cors())
 
+//
+app.get('/', (req, res) => { res.send('working...')})
+
 //Sign In endpoint
 app.post('/signin', (req, res) => { signIn.handleSignIn(req, res, db, bcrypt) })
 
