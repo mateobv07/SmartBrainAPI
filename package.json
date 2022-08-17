@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-    },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "bcrypt": "^5.0.1",
     "clarifai": "^2.9.1",
     "cors": "^2.8.5",
+    "express": "^4.18.1",
     "knex": "^2.2.0",
     "pg": "^8.7.3"
   }
