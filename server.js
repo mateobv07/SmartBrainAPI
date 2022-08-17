@@ -16,7 +16,7 @@ const db = require('knex')({
 
 //Middleware for express
 const app = express()
-app.use(express.json());
+app.use(express.json()); 
 app.use(cors())
 
 //Sign In endpoint
