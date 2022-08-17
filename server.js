@@ -9,7 +9,8 @@ const profile = require('./controllers/profile')
 //Connect postgres
 const db = require('knex')({
     client: 'pg',
-    connection: "postgres://postgres:Thebahamas1@127.0.0.1:5432/smart-brain",
+    connection: process.env.DATABASE_URL,
+    ssl: true,
     searchPath: ['knex', 'public'],
 });
 
