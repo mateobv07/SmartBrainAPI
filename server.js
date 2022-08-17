@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors')
 const bcrypt = require('bcrypt');
-const knex = require('knex');
 
 const register = require('./controllers/register')
 const signIn = require('./controllers/signIn')
@@ -37,6 +36,8 @@ app.put('/image', (req, res) => { profile.handleImage(req, res, db) })
 //Clarifai api call
 app.post('/imageurl', (req, res) => { profile.handleApiCall(req, res) })
 
-app.listen(process.env.PORT || 3000, ()=> {
-    console.log(`App is running on port ${process.env.PORT}`);
+const PORT = process.env.PORT || 80;
+
+app.listen(PORT, ()=> {
+    console.log(`App is running on port ${PORT}`);
 })
